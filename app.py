@@ -4,14 +4,14 @@ try:
     from flask import Flask, render_template,request,redirect,flash,url_for,json
     import youtube_dl
     from random import random
-    from flask_sqlalchemy import SQLAlchemy
-    from sqlalchemy.sql import func
-    import sentry_sdk
-    import netrc
-    from sentry_sdk.integrations.flask import FlaskIntegration
+#     from flask_sqlalchemy import SQLAlchemy
+#     from sqlalchemy.sql import func
+#     import sentry_sdk
+#     import netrc
+#     from sentry_sdk.integrations.flask import FlaskIntegration
 except Exception as e:
     print(e)
-netrc = netrc.netrc()
+# netrc = netrc.netrc()
 
 app = Flask(__name__)
 app.secret_key='iamsecret'
