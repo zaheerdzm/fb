@@ -80,51 +80,51 @@ def home():
 #         SeoBlogs.id).order_by(SeoBlogs.id).order_by(SeoBlogsDetail.id).order_by(func.random()).limit(3).all()
     return render_template('index.html')
 
-@app.route('/format' ,methods=['POST'])
-def from_format():
-#     stmt = db.session.query(SeoBlogs, SeoBlogsDetail, SeoBlogSubCategories).filter(
-#         SeoBlogsDetail.blog_id == SeoBlogs.id and SeoBlogs.sub_category_id == SeoBlogSubCategories.id).group_by(
-#         SeoBlogs.id).order_by(SeoBlogs.id).order_by(SeoBlogsDetail.id).order_by(func.random()).limit(3).all()
+# @app.route('/format' ,methods=['POST'])
+# def from_format():
+# #     stmt = db.session.query(SeoBlogs, SeoBlogsDetail, SeoBlogSubCategories).filter(
+# #         SeoBlogsDetail.blog_id == SeoBlogs.id and SeoBlogs.sub_category_id == SeoBlogSubCategories.id).group_by(
+# #         SeoBlogs.id).order_by(SeoBlogs.id).order_by(SeoBlogsDetail.id).order_by(func.random()).limit(3).all()
 
-    fburl = request.form['url']
-    if 'https://m.youtube.com/watch?' in fburl:
-                flash('Not a Valid Fb UrL')
-                return redirect(url_for('home'))
-    elif 'https://youtu.be/' in fburl:
-        flash('Not a Valid Fb UrL')
-        return redirect(url_for('home'))
-    elif 'https://www.youtube.com/watch?' in fburl:
-        flash('Not a Valid Fb UrL')
-        return redirect(url_for('home'))
-    try:
-        with youtube_dl.YoutubeDL() as ytdl:
-            url=ytdl.extract_info(fburl ,download=False,netrc=netrc)
-            vidFormat =url['formats']
-            vidTital=url['title']
+#     fburl = request.form['url']
+#     if 'https://m.youtube.com/watch?' in fburl:
+#                 flash('Not a Valid Fb UrL')
+#                 return redirect(url_for('home'))
+#     elif 'https://youtu.be/' in fburl:
+#         flash('Not a Valid Fb UrL')
+#         return redirect(url_for('home'))
+#     elif 'https://www.youtube.com/watch?' in fburl:
+#         flash('Not a Valid Fb UrL')
+#         return redirect(url_for('home'))
+#     try:
+#         with youtube_dl.YoutubeDL() as ytdl:
+#             url=ytdl.extract_info(fburl ,download=False,netrc=netrc)
+#             vidFormat =url['formats']
+#             vidTital=url['title']
 
 
-        return render_template('converter.html', vidFormat=vidFormat, iframe=url, fburl=fburl,vidTital=vidTital,)
-    except Exception as e:
-        print(e)
-        flash("Not a valid facebook video URL")
-        flash("Paste a valid facebook video URL")
-        return redirect(url_for('home'))
+#         return render_template('converter.html', vidFormat=vidFormat, iframe=url, fburl=fburl,vidTital=vidTital,)
+#     except Exception as e:
+#         print(e)
+#         flash("Not a valid facebook video URL")
+#         flash("Paste a valid facebook video URL")
+#         return redirect(url_for('home'))
 
-@app.route('/download' ,methods=['POST'])
-def vid_download():
-    try:
-        fburl=request.form['fburl']
+# @app.route('/download' ,methods=['POST'])
+# def vid_download():
+#     try:
+#         fburl=request.form['fburl']
 
-        vidindex= int(request.form['vidindex'])
-        with youtube_dl.YoutubeDL() as ytdl:
-            url = ytdl.extract_info(fburl,download=False,netrc=netrc)
-            download_url =(url['formats'][vidindex]['url'])
-        return redirect(download_url+"&dl=1")
-    except Exception as e:
-        print(e)
-        flash('Something went Wrong!')
-        flash('Try again or with another video.')
-        return redirect(url_for('home'))
+#         vidindex= int(request.form['vidindex'])
+#         with youtube_dl.YoutubeDL() as ytdl:
+#             url = ytdl.extract_info(fburl,download=False,netrc=netrc)
+#             download_url =(url['formats'][vidindex]['url'])
+#         return redirect(download_url+"&dl=1")
+#     except Exception as e:
+#         print(e)
+#         flash('Something went Wrong!')
+#         flash('Try again or with another video.')
+#         return redirect(url_for('home'))
 
 @app.route('/faq')
 def faq():
