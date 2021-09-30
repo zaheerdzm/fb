@@ -78,7 +78,7 @@ def home():
 #     stmt = db.session.query(SeoBlogs, SeoBlogsDetail, SeoBlogSubCategories).filter(
 #         SeoBlogsDetail.blog_id == SeoBlogs.id and SeoBlogs.sub_category_id == SeoBlogSubCategories.id).group_by(
 #         SeoBlogs.id).order_by(SeoBlogs.id).order_by(SeoBlogsDetail.id).order_by(func.random()).limit(3).all()
-    return render_template('index.html')
+    return 'hello'#render_template('index.html')
 
 # @app.route('/format' ,methods=['POST'])
 # def from_format():
@@ -150,23 +150,23 @@ def contact_us():
 #         return 'ok'
 #         # raise HTTPException
 
-@app.route('/term-of-services')
-def termofservices():
-    return render_template('termOfServices.html')
+# @app.route('/term-of-services')
+# def termofservices():
+#     return render_template('termOfServices.html')
 
-@app.route('/privacy-policy')
-def policy():
-    return render_template('privacy-policy.html')
+# @app.route('/privacy-policy')
+# def policy():
+#     return render_template('privacy-policy.html')
 
-@app.errorhandler(Exception)
-def handle_exception(e):
-    if e.code ==404:
-        return render_template('notfound.html')
-    else:
-        error_name= e.name
-        error_code= e.code
-        error_description= e.description
-        return render_template('myerror.html',error_name=error_name,error_description=error_description,error_code=error_code)
+# @app.errorhandler(Exception)
+# def handle_exception(e):
+#     if e.code ==404:
+#         return render_template('notfound.html')
+#     else:
+#         error_name= e.name
+#         error_code= e.code
+#         error_description= e.description
+#         return render_template('myerror.html',error_name=error_name,error_description=error_description,error_code=error_code)
 
 if __name__ == '__main__':
 
