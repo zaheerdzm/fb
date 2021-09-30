@@ -2,8 +2,8 @@
 
 try:
     from flask import Flask, render_template,request,redirect,flash,url_for,json
-    import youtube_dl
-    from random import random
+#     import youtube_dl
+#     from random import random
 #     from flask_sqlalchemy import SQLAlchemy
 #     from sqlalchemy.sql import func
 #     import sentry_sdk
@@ -14,7 +14,7 @@ except Exception as e:
 # netrc = netrc.netrc()
 
 app = Flask(__name__)
-app.secret_key='iamsecret'
+# app.secret_key='iamsecret'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://iwritee_sandboxuser:0w16oxSsQ$C1@23.229.0.146/iwritee_sandboxdb'
 # app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:@localhost/blogs'
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
@@ -126,13 +126,13 @@ def home():
 #         flash('Try again or with another video.')
 #         return redirect(url_for('home'))
 
-@app.route('/faq')
-def faq():
-    return render_template('faq.html')
+# @app.route('/faq')
+# def faq():
+#     return render_template('faq.html')
 
-@app.route('/contact-us')
-def contact_us():
-    return render_template('contactus.html')
+# @app.route('/contact-us')
+# def contact_us():
+#     return render_template('contactus.html')
 
 # @app.route('/blog')
 # def blog():
