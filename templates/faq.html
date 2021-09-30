@@ -1,0 +1,216 @@
+{% extends 'layout.html' %}
+<!-- Tital here -->
+    {% block title %}
+        FAQ
+    {% endblock %}
+
+<!-- Custom style here -->
+{% block style %}
+<style>
+    header {
+      background-color: #6675FF;
+    }
+
+    .accordion-item {
+      margin: 15px;
+      border: 1.75px solid #DBDBDB !important;
+      padding: 1px;
+      border-radius: 8px !important;
+      align-items: center;
+      background-color: white;
+
+
+    }
+
+    .accordion-button:focus {
+      z-index: none !important;
+      border-color: white !important;
+      outline: 0;
+      box-shadow: none !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: #4F4F4F;
+      background-color: white !important;
+      box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    }
+
+    .accordion p {
+      font-weight: bold;
+
+
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      background-image: url("{{ url_for('static',filename='images/minus.svg') }}");
+      transform: rotate(-180deg);
+    }
+
+    .accordion-button::after {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-left: auto;
+      content: "";
+      background-image: url("{{ url_for('static',filename='images/plus.svg') }}");
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+      transition: transform .2s ease-in-out;
+    }
+
+    .accordion-button p {
+      margin-bottom: 0px !important;
+    }
+  </style>
+{% endblock %}
+
+<!-- Sub Header here -->
+{% block subhead %}
+<section id="home-banner" class=" pb-lg-0">
+      <h1 class="title text-light text-center mt-5 ">
+        FAQ <br>
+        <p class="text-light p-3" style="font-size:24px ;">Frequently asked questions</p>
+      </h1>
+
+
+    </section>
+{% endblock %}
+
+<!-- Main Content here -->
+{% block content %}
+<section id="accordion">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-8 mx-auto">
+          <div class="accordion " id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  <p>Is youtubetomp4 is free to download Youtube Videos?</p>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body bg-light">
+                  Yes, youtubetomp4 is is a free platform to download Video/Audio files from Youtube.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header " id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
+                  <p>Is it necessary to register on youtubetomp4 to download data?</p>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body bg-light">
+                  It is hidden by default, until the collapse plugin
+                  adds the appropriate classes that we use to style each element. These classes control the overall
+                  appearance, as
+                  well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+                  overriding our
+                  default variables. It's also worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree">
+                  <p>Can i use youtubetomp4 on my Mobile or Tablet?</p>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body bg-light">
+                  You can modify any of this with custom CSS or overriding our
+                  default variables. It's also worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingfour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree">
+                  <p>Is youtubetomp4 is free to download Youtube Videos?</p>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingfour">
+                <div class="accordion-body bg-light">
+                  You can modify any of this with custom CSS or overriding our
+                  default variables. It's also worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingfive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapsefive">
+                  <p>What type of file formats does youtubetomp4 support?</p>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingfive">
+                <div class="accordion-body bg-light">
+                  It's also worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingsix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapsesix" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapsesix">
+                  <p>Is youtubetomp4 is safe for use?</p>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapsesix" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingsix">
+                <div class="accordion-body bg-light">
+                  It's also worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingseven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseseven" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseseven">
+                  <p>Can i download age-restricted videos with y2mate?</p>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingseven">
+                <div class="accordion-body bg-light">
+                  It's also worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Custom Script here -->
+{% block script %}
+
+{% endblock %}

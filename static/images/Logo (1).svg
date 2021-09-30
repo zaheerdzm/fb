@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="317.055" height="42.055" viewBox="0 0 317.055 42.055">
+  <g id="Group_745" data-name="Group 745" transform="translate(-137 -21.973)">
+    <text id="FBVIDEODOWNLOADER" transform="translate(194.055 55)" fill="#fff" font-size="30" font-family="Impact"><tspan x="0" y="0">FBVIDEODOWNLOADER</tspan></text>
+    <g id="Group_732" data-name="Group 732" transform="translate(56.073 -515.139)">
+      <rect id="Rectangle_405" data-name="Rectangle 405" width="42.055" height="42.055" rx="7.885" transform="translate(80.927 537.111)" fill="#d4e2ff"/>
+      <line id="Line_94" data-name="Line 94" y2="8.607" transform="translate(103.096 559.134)" fill="none"/>
+      <path id="Path_928" data-name="Path 928" d="M122.982,564.269v7.012a7.885,7.885,0,0,1-7.885,7.885H97.541l-9.161-8.283v-4.218l13.191-.236,3.621-.064-.332-.335-3.13-3.414-.087-.042c.169-.032-.1-.071-.1-.071l-2.915-3.217,1.657-1.726,1.289-8.247,2.8-3.713.62.621Z" fill="#99b3dd"/>
+      <g id="Group_731" data-name="Group 731">
+        <path id="Path_929" data-name="Path 929" d="M109.235,555.63l-6.47,6.776a.923.923,0,0,1-1.336,0l-6.467-6.776a.925.925,0,0,1,.667-1.563h3.388v-7.085a1.542,1.542,0,0,1,1.541-1.539h3.079a1.566,1.566,0,0,1,.5.081,1.548,1.548,0,0,1,.826.667,1.523,1.523,0,0,1,.219.791v7.085h3.389A.926.926,0,0,1,109.235,555.63Z" fill="#455da7"/>
+        <path id="Path_930" data-name="Path 930" d="M116.592,568.09v.609a2.137,2.137,0,0,1-2.134,2.135H89.451a2.094,2.094,0,0,1-.9-.2,2.145,2.145,0,0,1-1.237-1.936v-.609a2.138,2.138,0,0,1,2.135-2.135h25.007A2.137,2.137,0,0,1,116.592,568.09Z" fill="#455da7"/>
+      </g>
+    </g>
+  </g>
+</svg>

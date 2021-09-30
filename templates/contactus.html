@@ -1,0 +1,126 @@
+{% extends 'layout.html' %}
+<!-- Tital here -->
+    {% block title %}
+CONTACT US
+    {% endblock %}
+
+<!-- Custom style here -->
+    {% block style %}
+<style>
+    header {
+      background-color: #6675FF;
+
+
+    }
+
+    .form-control {
+      border: none !important;
+      background-color: #F6F6F6;
+      border-radius: 4px !important;
+      padding: 10px;
+    }
+
+    .contact-form,
+    label {
+      color: #727373;
+      font-size: 16px;
+      font-weight: 400;
+      margin-left: 3px;
+      margin-bottom: 3px;
+    }
+
+    .icon {
+      padding: 10px;
+      background: dodgerblue;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .name {
+      background-image: url("{{ url_for('static',filename='images/Iocns/name.svg') }}");
+      background-repeat: no-repeat;
+      background-position-y: 22px;
+      background-position-x: 6px;
+      background-size: 16px;
+
+    }
+
+    .email {
+      background-image: url("{{ url_for('static',filename='images/Iocns/mail.svg') }}");
+      background-repeat: no-repeat;
+   background-position-y: 26px;
+   background-position-x: 3px;
+   background-size: 16px;
+
+    }
+  </style>
+    {% endblock %}
+
+<!-- Sub Header here -->
+    {% block subhead %}
+<section id="home-banner" class=" pb-lg-0 ">
+      <h1 class="title text-light text-center mt-4 pb-4 ">
+        Contact us
+
+      </h1>
+
+
+    </section>
+    {% endblock %}
+
+<!-- Main Content here -->
+    {% block content %}
+<section id="contact-form">
+    <div class="container my-5">
+      <div class="row ">
+        <div class="col-lg-8 shadow mx-auto p-4">
+
+          <form class="row g-3 needs-validation" novalidate>
+
+            <div class="col-lg-6">
+
+              <label for="validationCustom01" class="form-label">Name</label>
+              <input type="text" class="form-control name" id="validationCustom01" name="name" placeholder=" Your Name"
+                required>
+
+
+
+              <div class="emial mt-4">
+                <label for="name">E mail</label>
+                <input type="text" class="form-control email" id="validationCustom01" id="emial" name="email"
+                  placeholder="Your E-mail" required="">
+              </div>
+
+
+
+
+              <div class="form-group mt-4">
+                <label for="validationCustom01">Message</label>
+                <textarea class="form-control text" id="validationCustom01" name="textarea" required rows="7"
+                  placeholder="Type your message here"></textarea>
+              </div>
+              <a href="#">
+                <button class="btn bg-light mt-4 ps-4 pe-4" style="color:white; background-color: #6675FF !important;">
+                  submit
+                </button>
+              </a>
+            </div>
+
+           <div class="col-lg-6 text-center d-flex align-items-center justify-content-center   align-items-center">
+             <img class="img-fluid mt-4" src="{{ url_for('static',filename='images/Group 657.svg') }}" width="" alt="">
+           </div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+    {% endblock %}
+
+<!-- Custom Script here -->
+    {% block script %}
+
+    {% endblock %}
